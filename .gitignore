@@ -1,0 +1,42 @@
+# Ignore gradle files
+.gradle
+build/
+*/build/
+
+# Android Studio/IDEA
+*.iml
+.idea/workspace.xml
+.idea/caches/
+.idea/libraries/
+.idea/deploymentTargetDropDown.xml
+.idea/assetWizardSettings.xml
+.idea/navEditor.xml
+
+# Mac files
+.DS_Store
+
+# Captures
+/captures
+
+# Logs
+*.log
+
+# NDK
+.externalNativeBuild
+.cxx
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# built application files
+*.apk
+*.ap_
+*.aab
+
+# Kotlin caches
+.kotlin/
+
+# Keystore
+*.jks
+*.keystore
+

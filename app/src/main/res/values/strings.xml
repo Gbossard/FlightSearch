@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Flight Search</string>
+    <string name="back_button">Back</string>
+    <string name="search">Search</string>
+    <string name="close">Close</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorite_routes">Favorite routes</string>
+    <string name="search_departure_airport">Enter departure airport</string>
+    <string name="depart">DEPART</string>
+    <string name="flight_from">Flight from \"%1$s\"</string>
+    <string name="arrival">ARRIVAL</string>
+    <string name="flight">Flight</string>
+    <string name="flight_error_image">Flight Error</string>
+    <string name="flight_error_text">No matches for \"%1$s\"</string>
+</resources>
