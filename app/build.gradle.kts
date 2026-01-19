@@ -61,7 +61,7 @@ dependencies {
     implementation(libs.androidx.room.ktx)
 
     // DataStore
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation(libs.androidx.datastore.preferences)
 
     testImplementation(libs.junit)
 
