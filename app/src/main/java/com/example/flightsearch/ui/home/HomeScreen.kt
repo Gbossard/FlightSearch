@@ -2,7 +2,6 @@ package com.example.flightsearch.ui.home
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -13,7 +12,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SearchBar
 import androidx.compose.material3.SearchBarDefaults
 import androidx.compose.material3.SearchBarDefaults.inputFieldColors
@@ -33,38 +31,25 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.flightsearch.R
 import com.example.flightsearch.model.Airport
 import com.example.flightsearch.ui.AppViewModelProvider
-import com.example.flightsearch.ui.FlightSearchTopAppBar
 import com.example.flightsearch.ui.composable.AutoSuggestionItem
 import com.example.flightsearch.ui.composable.ErrorFlight
 import com.example.flightsearch.ui.composable.FavoriteList
 import com.example.flightsearch.ui.composable.SearchList
-import com.example.flightsearch.ui.navigation.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier
 ) {
-    Scaffold(
-        modifier = modifier,
-        topBar = {
-            FlightSearchTopAppBar(
-                title = stringResource(Screen.Home.titleRes)
-            )
-        }
-    ) { innerPadding ->
-        HomeBody(
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = innerPadding
-        )
-    }
+    HomeBody(
+        modifier = modifier.fillMaxSize()
+    )
 }
 
 
 @Composable
 fun HomeBody(
     modifier: Modifier = Modifier,
-    contentPadding: PaddingValues = PaddingValues(0.dp),
     viewModel: HomeViewModel = viewModel(factory = AppViewModelProvider.Factory)
 ) {
     val searchUiState by viewModel.searchUiState.collectAsStateWithLifecycle()
@@ -72,7 +57,7 @@ fun HomeBody(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(contentPadding),
+            .padding(0.dp),
     ) {
         CustomizableSearchBar(
             query = searchUiState.query,

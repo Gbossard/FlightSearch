@@ -14,10 +14,10 @@ fun FlightSearchNavGraph(
 ) {
     NavHost(
         navController = navController,
-        startDestination = Screen.Home.routes,
+        startDestination = HomeRoute,
         modifier = modifier
     ) {
-        composable(route = Screen.Home.routes) {
+        composable<HomeRoute> {
             HomeScreen()
         }
     }
